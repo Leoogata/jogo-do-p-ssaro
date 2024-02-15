@@ -66,9 +66,21 @@ function update() {
         passarinho.setFlip(true, false );
         passarinho.ida = false;
     }
-    if (passarinho.x > 100 & passarinho.ida === false) {
+    if (passarinho.x > 100 && passarinho.ida === false) {
         console.log('o que acontece agora?')
-        passarinho.x -=5
+        passarinho.x -=5;
+    }
+    if (passarinho.y === 300){
+        passarinho.ida = true;
+    }
+    if (passarinho.y < 500 && passarinho.ida === true){
+        passarinho.y -= 2;
+    }
+    if (passarinho === 500){
+        passarinho.ida = false;
+    }
+    if (passarinho.y < 300 && passarinho.ida === false){
+        passarinho.y += 2;
     }
 }
 
