@@ -62,6 +62,7 @@ function update() {
     if (passarinho.x < 700 && passarinho.ida === true){//enquanto o pássaro não alcançar o 700 na linha  abscissa ele continuará indo para frente
         console.log('O que acontece?');
         passarinho.x +=5; //faz com que o pássaro se mova na horizontal
+        passarinho.y -=2;
     }
     if (passarinho.x === 700){
         passarinho.setFlip(true, false );// Após o pássaro atingir o 700 seu sprite é virado na horizontal para simular a volta
@@ -70,19 +71,7 @@ function update() {
     if (passarinho.x > 100 && passarinho.ida === false) {
         console.log('o que acontece agora?')
         passarinho.x -=5;//faz com que o pássaro se mova na horizontal
-    }
-    if (passarinho.y === 300){
-        passarinho.ida = true;
-    }
-    if (passarinho.y < 500 && passarinho.ida === true){//enquanto o pássaro não alcançar o 500 na linha na linha ordenada ele continuará indo para cima
-        passarinho.y -= 2;//faz com que o pássaro se mova na vertical
-    }
-    if (passarinho.y === 100){
-        passarinho.setFlip(true, false);
-        passarinho.ida = false;
-    }
-    if (passarinho.y < 300 && passarinho.ida === false){
-        passarinho.y += 2;//faz com que o pássaro se mova na vertical
+        passarinho.y +=2;
     }
 }
 
