@@ -77,7 +77,8 @@ function update() {
     if (passarinho.y < 500 && passarinho.ida === true){//enquanto o pássaro não alcançar o 500 na linha na linha ordenada ele continuará indo para cima
         passarinho.y -= 2;//faz com que o pássaro se mova na vertical
     }
-    if (passarinho === 500){
+    if (passarinho.y === 100){
+        passarinho.setFlip(true, false);
         passarinho.ida = false;
     }
     if (passarinho.y < 300 && passarinho.ida === false){
